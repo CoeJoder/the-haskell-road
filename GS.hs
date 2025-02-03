@@ -62,6 +62,7 @@ ldpf (p:ps) n | rem n p == 0 = p
 
 primes1 :: [Integer]
 primes1 = 2 : filter prime [3..]
+-- primes1 = filter prime [2..] -- causes vicious cycle
 
 prime :: Integer -> Bool
 prime n | n < 1     = error "not a positive integer"
